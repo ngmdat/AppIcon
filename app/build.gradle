@@ -1,9 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "23.0.0 rc3"
-
+    signingConfigs {
+        AppICon {
+            keyAlias 'AtomSS Release Key'
+            keyPassword 'harada555admin'
+            storeFile file('C:/Users/Dat/AndroidStudioProjects/final_apps/keystore/atom-ss.jks')
+            storePassword 'harada555admin'
+        }
+    }
+    compileSdkVersion 8
+    buildToolsVersion '23.0.0 rc3'
     defaultConfig {
         applicationId "com.atom_ss.appicon"
         minSdkVersion 8
